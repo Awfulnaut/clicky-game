@@ -1,7 +1,7 @@
 import React from "react"
 
 const Image = props => (
-  <img src="https://placehold.it/200x200" alt="Cute kitty"/>
+  <img src={require ("../images/" + props.src)} onClick={props.onClick} alt="Cute kitty"/>
 )
 
 export default Image
