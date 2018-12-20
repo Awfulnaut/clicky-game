@@ -1,0 +1,2 @@
+.navbar{position:fixed;top:0;left:0;width:100%;box-shadow:0 14px 28px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.22);z-index:1}.navbar p{margin:0}.nav-item{color:#fff}.cats-container{max-width:996px}.cats-wrapper{display:flex;flex-wrap:wrap;justify-content:space-evenly}.cat-photo{margin:10px;-webkit-transition:all .2s;transition:all .2s}.cat-photo,.cat-photo img{border-radius:4px}.cat-photo:hover{-webkit-transform:scale(1.05);transform:scale(1.05);box-shadow:0 0 28px rgba(0,0,0,.75);cursor:pointer}
+/*# sourceMappingURL=main.7127464b.chunk.css.map */
