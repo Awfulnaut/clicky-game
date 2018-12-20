@@ -1,6 +1,6 @@
 import React from "react"
 import Image from "./Image"
-import "../styles/CatPhoto.css"
+import "../styles/cats.css"
 
 const ImagesContainer = props => {
   const catList = props.catPhotos.map(photos => {
@@ -9,13 +9,14 @@ const ImagesContainer = props => {
         <Image
         src={photos.image}
         onClick={props.handleClick}
+        id={photos.id}
         />
       </div>
     )
   })
 
   return (
-    <div className="container mb-5">
+    <div className="container cats-container mb-5">
       <div className="row">
         <div className="cats-wrapper">
           {catList}

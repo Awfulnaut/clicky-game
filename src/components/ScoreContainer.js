@@ -1,6 +1,5 @@
 import React from "react";
 import Navbar from "./Navbar";
-// import Counter from "./Counter";
 import catPhotos from "../catPhotos.json";
 import Header from "./Header";
 import ImagesContainer from "./ImagesContainer";
@@ -8,18 +7,45 @@ import ImagesContainer from "./ImagesContainer";
 class ScoreContainer extends React.Component {
   state = {
     score: 0,
-    topScore: 0,
-    catPhotos: catPhotos
+    highScore: 0,
+    photos: [...catPhotos]
   }
 
-  // handleIncrement increases this.state.count by 1
-  // handleIncrement = () => {
-  //   this.setState({ score: this.state.score + 1 });
-  // }
-
-  handleClick = () => {
-    this.setState({ catPhotos: this.shuffle(catPhotos)})
-  }
+  handleClick = id => {
+    let guessedCorrectly = false;
+    const updatedCats = this.state.photos.map(element => {
+      const newCat = {...element};
+      if(newCat.id === id && !newCat.clicked) {
+        newCat.clicked = true;
+        guessedCorrectly = true;
+      };
+      return newCat;
+    });
+    guessedCorrectly
+      ? this.handleWin(updatedCats)
+      : this.handleLose();
+  };
+  
+  handleWin = updatedCats => {
+    const score = this.state.score + 1;
+    let highScore = this.state.highScore;
+    if(score > highScore) {
+      highScore = score;
+    };
+    this.setState({
+      photos: this.shuffle(updatedCats),
+      score,
+      highScore
+    });
+  };
+  
+  handleLose = () => {
+    this.setState({
+      score: 0,
+      photos: [...catPhotos]
+    })
+  };
+  
 
   shuffle = (arr) => {
     for (let i = arr.length - 1; i > 0; i--) {
@@ -34,11 +60,11 @@ class ScoreContainer extends React.Component {
       <div>
         <Navbar 
           score={this.state.score}
-          topScore={this.state.topScore}
+          highScore={this.state.highScore}
         />
         <Header />
         <ImagesContainer
-          catPhotos={this.state.catPhotos} 
+          catPhotos={this.state.photos} 
           handleClick={this.handleClick}
         />
       </div>

@@ -1,50 +1,62 @@
 [
   {
     "id": 1,
-    "image": "mildred-1.jpg"
+    "image": "mildred-1.jpg",
+    "clicked": false
   },
   {
     "id": 2,
-    "image": "mildred-2.jpg"
+    "image": "mildred-2.jpg",
+    "clicked": false
   },
   {
     "id": 3,
-    "image": "mildred-3.jpg"
+    "image": "mildred-3.jpg",
+    "clicked": false
   },
   {
     "id": 4,
-    "image": "mildred-4.jpg"
+    "image": "mildred-4.jpg",
+    "clicked": false
   },
   {
     "id": 5,
-    "image": "mildred-5.jpg"
+    "image": "mildred-5.jpg",
+    "clicked": false
   },
   {
     "id": 6,
-    "image": "mildred-6.jpg"
+    "image": "mildred-6.jpg",
+    "clicked": false
   },
   {
     "id": 7,
-    "image": "mildred-7.jpg"
+    "image": "mildred-7.jpg",
+    "clicked": false
   },
   {
     "id": 8,
-    "image": "mildred-8.jpg"
+    "image": "mildred-8.jpg",
+    "clicked": false
   },
   {
     "id": 9,
-    "image": "mildred-9.jpg"
+    "image": "mildred-9.jpg",
+    "clicked": false
   },
   {
     "id": 10,
-    "image": "mildred-10.jpg"
+    "image": "mildred-10.jpg",
+    "clicked": false
   },
   {
     "id": 11,
-    "image": "mildred-11.jpg"
+    "image": "mildred-11.jpg",
+    "clicked": false
   },
   {
     "id": 12,
-    "image": "mildred-12.jpg"
+    "image": "mildred-12.jpg",
+    "clicked": false
   }
 ]

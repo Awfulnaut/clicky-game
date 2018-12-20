@@ -1,3 +1,7 @@
+.cats-container {
+  max-width: 996px;
+}
+
 .cats-wrapper {
   display: flex;
   flex-wrap: wrap;
